@@ -770,6 +770,9 @@ input {
 	.price-item img{
 		width: 30%;
 	}
+	.global-container{
+		padding: 20px;
+	}
 }
 
 
