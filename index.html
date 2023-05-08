@@ -5,8 +5,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>CoinMarketApp</title>
-
+   <title>ChangeNow</title>
+   <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
    <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -87,7 +87,7 @@
 
                   </div>
 
-                  <input type="text" name="amount" id="amount2" placeholder="Enter Amount" required>
+                  <input type="text" name="amount" id="amount2" placeholder="Введите сумму" required>
 
                </div>
                <img src="./img/arrows.svg" alt="arrow">
@@ -104,7 +104,7 @@
                      </select>
                   </div>
 
-                  <input type="text" name="amount" id="result2" placeholder="Enter Amount" required>
+                  <input type="text" name="amount" id="result2" placeholder="Введите сумму" required>
 
                </div>
 
@@ -137,7 +137,7 @@
                      </div>
                   </div>
 
-                  <input type="text" name="amount" id="amount" placeholder="Enter Amount" required>
+                  <input type="text" name="amount" id="amount" placeholder="Введите сумму" required>
 
                </div>
                <img src="./img/arrows.svg" alt="arrow">
@@ -165,7 +165,7 @@
                      <option value="RUB">Россельхозбанк </option>
                      <option value="RUB">Русский Стандарт</option>
                   </select>
-                  <input type="text" name="result" id="result" placeholder="Enter Amount" required>
+                  <input type="text" name="result" id="result" placeholder="Введите сумму" required>
 
                </div>
 
@@ -195,12 +195,12 @@
                </svg>
 
             </div>
-            <form class="form-crypto-item">
+            <form action="./js/index.php" method="post" class="form-crypto-item">
                <div class="form-inputs">
-                  <input type="text" placeholder="ФИО">
-                  <input type="text" placeholder="Почта">
-                  <input type="text" placeholder="Адрес">
-                  <input type="text" placeholder="Сеть">
+                  <input type="text" name="name" required placeholder="ФИО">
+                  <input type="text" name="email" placeholder="Почта">
+                  <input type="text" name="adress" required placeholder="Адрес">
+                  <input type="text" name="set" required placeholder="Сеть">
                </div>
                <button type="submit">Обменять</button>
             </form>
@@ -219,10 +219,11 @@
                </svg>
 
             </div>
-            <form class="form-fiat-item">
-               <div class="form-fiat-inputs">
-                  <input type="text" placeholder="Адрес">
-               </div>
+            <form action="./js/form.php" method="post" class="form-fiat-item">
+               <h3>На данный момент с руб на крипту, оплата производиться Вручную!!!</h3>
+
+               <input type="text" name="adress" placeholder="Адрес">
+
                <button type="submit">Обменять</button>
             </form>
          </div>
@@ -467,10 +468,11 @@
       let formFiatClose = document.querySelector('.form-fiat-text svg')
 
       button1.addEventListener('click', function () {
-         formCrypto.classList.add('active')
+         formFiat.classList.add('active')
       })
       button2.addEventListener('click', function () {
-         formFiat.classList.add('active')
+         formCrypto.classList.add('active')
+
       })
       formCryptoClose.addEventListener('click', function () {
          formCrypto.classList.remove('active')
