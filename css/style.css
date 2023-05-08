@@ -297,6 +297,10 @@ input {
 	display: flex;
 	flex-direction: column;
 }
+.form-fiat-item h3{
+	text-align: center;
+	margin: 20px 0;
+}
 .form-inputs{
 	display: grid;
 	grid-template-columns: repeat(2,1fr);
@@ -391,21 +395,21 @@ input {
 
 	color: #000;
 }
-.form-fiat-inputs input{
-	background: #EAEAEA;
+.form-fiat-item input{
+	background: #cfcfcf;
 	box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
 	border-radius: 30px;
 	width: 100%;
 	margin-bottom: 30px;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 20px;
 	padding: 20px;
 	letter-spacing: -0.02em;
 	border: none;
 	color: #000;
 }
-.form-fiat-inputs input::placeholder{
-	color: #FFFFFF;
+.form-fiat-item input::placeholder{
+	color: #000;
 }
 .form-button{
 	margin-top: 50px;
@@ -435,7 +439,48 @@ input {
 	transition: .3s ease-in-out;
 }
 
+.thanks{
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.thanks-container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: #000;
+}
+.thanks-item{
+   display: flex;
+   align-items: center;
+   text-align: center;
+   flex-direction: column;
+   gap: 20px;
+}
+.button-home{
+   background-color: #000;
+   border-radius: 20px;
+   color: #fff;
+}
+.button-diolog{
+   border: 1px solid #000;
+   border-radius: 20px;
+   color: #000000;
+}
+.thanks-item h1{
+   font-size: 50px;
+   font-weight: 700;
+   margin-bottom: 30px;
+}
 
+.thanks-item a{
+   padding: 30px 20px;
+   font-size: 24px;
+   font-weight: 500;
+}
 
 .price-title h2,
 .testemonials-title h2,
@@ -692,7 +737,7 @@ input {
 	.form-item select{
 		font-size: 16px;
 		height: 60px;
-		padding: 10px;
+		padding: 20px;
 	}
 	.header-logo{
 		transform: scale(0.8);
@@ -714,13 +759,16 @@ input {
 		padding: 15px;
 		border-radius: 20px;
 	}
-	.form-fiat-inputs input{
+	.form-fiat-item input{
 		font-size: 16px;
 		margin-bottom: 15px;
 	}
 
 	.form-crypto-item button, .form-fiat-item button{
 		font-size: 20px;
+	}
+	.price-item img{
+		width: 30%;
 	}
 }
 
